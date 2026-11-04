@@ -1,0 +1,220 @@
+/* Color Palette
+# - color 1
+# - color 2
+# - color 3
+# - color 4
+*/
+/* General styles */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+nav {
+  background: rgb(255, 229, 169);
+  margin-bottom: 5px;
+}
+a {
+  background: lightblue;
+}
+
+/* Navigation using 'display' */
+.display {
+  text-align: center;
+  
+  /* To reduce the space between the elements set the font size to zero in the parent element. */
+  
+  /* font-size: 0; */
+  
+}
+.display a {
+  padding: 10px;
+  display: inline-block;
+  
+  /* This extra space affects how much total space the element takes up. Let's say I want to make four equal elements, by setting the links to a width of 25%. Even though 25 x 4 = 100%, the last item gets pushed down to the next line because there's not enough space for it. */  
+  
+  /* width: 25%; */
+  
+  
+  
+  /* Because font size is also inherited, you'll have to reset the font size in the child element itself. */
+  
+  /* font-size: 16px; */
+}
+
+.box { /* box styles */
+  width: 60px;
+  height: 50px; 
+  background: lightblue;
+  margin-bottom: 10px;
+}
+.parent {
+  position: relative;
+  border: 2px solid black;
+  height: 200px;
+}
+.relative { 
+  /* Elements that are positioned with Relative, stay in its natural flow. But you can use offset properties to nudge the elements from its default position. Similar to how we used negative margins. */
+
+  /* position: fixed; */
+  /* top: 0px; */
+  /* left: 160px;   */
+
+}
+.absolute {
+  
+  /*  Elements that are positioned with Absolute are removed from the page flow, and it's no longer part of the stacked elements. */
+  
+  /* position: fixed; */
+  /* left: 80px; */
+  /* top: 0px; */
+  
+}
+.fixed {
+/* Fixed positioning is similar to absolute, but it's always relative to the viewport, and stays in the fixed position always, even on page scroll. */  
+  
+  /* position: fixed; */
+  /* right: 500; */
+  /* top: 0; */
+}
+
+/* GLOBAL */
+.wrapper {
+  width: 400px;
+}
+.box {
+  float: left;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 1px solid black;
+}
+.box1 {
+  background: lightblue;
+}
+.box2 {
+  background: lightgreen;
+}
+
+header.Intro {
+    background: lightblue;
+    padding: 24px 0;
+}
+
+.content-wrap {
+  width: 90%;
+  max-width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+main.content-wrap {
+  display: flow-root;
+  overflow: visible;
+}
+
+.column-narrow {
+  flex: 0 0 200px;
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+
+/* Header & Footer 
+------------------------------------*/
+.profile-img {
+    width: 200px;
+  max-width: 100%;
+    border-radius: 50%;
+    margin: 0;
+    display: block;
+}
+.Intro h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.Intro h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+/* Work Experience
+------------------------------------*/
+
+
+
+/* Education
+------------------------------------*/
+#education .education-box {
+  float: none;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: auto;
+  min-height: 250px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: #111;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.58)),
+    url("../images/bgimg2.jpg") center / cover no-repeat;
+}
+
+body {
+  margin: 0;
+  padding-top: 52px;
+}
+
+.display {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+}
+
+.display a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: white;
+  background: transparent;
+  text-align: center;
+  text-decoration: none;
+}
+
+.display a:hover,
+.display a:focus-visible {
+  background: #4b145b;
+  text-decoration: underline;
+}
+
+header,
+section,
+footer {
+  scroll-margin-top: 64px;
+}
+
+@media (max-width: 420px) {
+  .display a {
+    padding: 10px 6px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
